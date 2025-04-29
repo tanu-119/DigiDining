@@ -1,0 +1,641 @@
+/* General Body Styles */
+
+html,
+body,
+#root {
+  font-family: "Georgia", serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Wrapper that ensures the footer sticks at the bottom */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height */
+}
+
+/* Main content area that will grow */
+.app-content {
+  flex-grow: 1; /* Allows content to take remaining space */
+}
+
+/* Styling for the nav */
+.app-nav {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto; /* Ensures footer is at bottom */
+}
+
+.footer a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+nav {
+  background-color: #1e40af;
+  color: white;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between; /* This will push items to both sides */
+  align-items: center; /* Vertically center the items */
+}
+
+nav h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+nav div {
+  display: flex; /* Align the navigation links in a row */
+  gap: 50px; /* Add space between the links */
+}
+
+nav a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fbbf24;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("images/hero-bg.jpeg"); /* High-quality image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%; /* Ensure the image spans the full width */
+  display: flex;
+  justify-content: flex-start; /* Align the content to the left */
+  align-items: center;
+  text-align: left; /* Align the text to the left */
+  padding-left: 20px; /* Add padding to the left */
+  box-sizing: border-box; /* Ensure padding is considered in width and height */
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #1e40af;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2563eb;
+}
+/* Popular Items Section */
+.popular-items {
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+.popular-items h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.popular-items-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Item Cards */
+.item-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Consistent card width */
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+}
+
+.item-image {
+  width: 100%; /* Make the image fill the card width */
+  height: 150px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures images are scaled correctly */
+  border-radius: 10px;
+}
+
+.item-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.item-price {
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #1e40af;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.footer a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.footer-links a:hover {
+  color: #fbbf24;
+}
+
+/* Container 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+*/
+footer p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Cart & Order Pages (Basic Layout) */
+.cart-page,
+.order-page {
+  padding: 20px;
+}
+
+.cart-page h2,
+.order-page h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Style for the empty cart message */
+.empty-cart-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; /* Full screen height */
+  text-align: center;
+}
+
+.cart-item,
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cart-item .item-name,
+.order-item .item-name {
+  font-size: 1.1rem;
+}
+
+.cart-item .item-price,
+.order-item .item-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+/***********Menu css ***********************/
+/* Menu Container */
+.menu-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Category Card Styles */
+.category-cards {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.category-card {
+  padding: 75px;
+  background-color: #8f8e8ec4;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.category-card:hover,
+.category-card.active {
+  background-color: black;
+  color: white;
+}
+
+.category-name {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Menu Item Styles */
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.item-left {
+  flex: 1;
+  max-width: 200px;
+}
+
+.item-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+.item-image:hover {
+  transform: scale(1.05);
+}
+
+.item-details {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.item-price {
+  font-size: 1.1rem;
+  color: #2ecc71;
+  margin: 0 0 10px;
+}
+
+.item-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.item-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-to-cart-btn {
+  padding: 10px 20px;
+  background-color: rgba(146, 7, 146, 0.849);
+  color: white;
+  font-weight: bold;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: rgb(120, 0, 120);
+  transform: scale(1.05); /* slight pop on hover */
+}
+
+.add-to-cart-btn:focus {
+  outline: none;
+}
+
+.remove-from-cart-btn {
+  padding: 15px 25px;
+  background-color: red;
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  font-family: "Georgia", "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.remove-from-cart-btn:hover {
+  background-color: #c53030;
+  transform: scale(1.05); /* slight pop on hover */
+}
+
+.proceed-to-order-btn {
+  margin-top: 16px;
+  background-color: #4caf50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Georgia", "Arial", "Helvetica", sans-serif;
+}
+
+.proceed-to-order-btn:hover {
+  background-color: #388e3c;
+  transform: scale(1.05); /* slight pop on hover */
+}
+
+/************************ OrderForm.jsx styles  ***************/
+.order-form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 45px;
+  background-color: #f9fafb;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.order-form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #1f2937;
+}
+
+.order-form-message {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #10b981; /* green for success */
+}
+
+.order-form-error {
+  color: #ef4444; /* red for error */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.order-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.order-form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.order-form-button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-form-button:hover {
+  background-color: #1d4ed8;
+}
+
+.order-form-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.quantity-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity-value {
+  font-weight: bold;
+}
+
+/********************* Order History **********************/
+/* Overall container */
+.order-history-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 45px;
+  background-color: #f9fafb;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* Title */
+.order-history-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #1f2937;
+}
+
+/* Search box */
+.order-search {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-search label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.order-search input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.order-search button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-search button:hover {
+  background-color: #0056b3;
+}
+
+/* Message */
+.order-message {
+  margin-top: 10px;
+  color: #d9534f;
+  font-weight: 600;
+}
+
+/* Each order card */
+.order-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 20px;
+}
+
+.order-card p {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.order-card strong {
+  color: #222;
+}
+
+.order-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.order-card li {
+  margin-bottom: 5px;
+}
