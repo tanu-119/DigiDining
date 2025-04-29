@@ -12,6 +12,9 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Handle preflight requests (CORS)
+app.options("*", cors());
+
 // Routes
 app.use("/orders", orderRoutes);
 
