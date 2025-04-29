@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
       id: item.id,
       name: item.name,
       price: item.price,
-      quantity: item.quantity || 1,  // default to 1 if not provided
+      quantity: item.quantity || 1,
     }));
 
     const total = updatedItems.reduce(
@@ -30,17 +30,30 @@ router.post("/", async (req, res) => {
   }
 });
 
-// Get orders by phone number
+// Get all orders by phone number
 router.get("/", async (req, res) => {
   try {
     const { phone } = req.query;
-
     if (!phone) {
       return res.status(400).json({ message: "Phone number required" });
     }
-
     const orders = await Order.find({ phone }).sort({ createdAt: -1 });
     res.json(orders);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+// (Optional) Get one order by ID - correctly defined
+router.get("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const order = await Order.findById(id);
+    if (!order) {
+      return res.status(404).json({ message: "Order not found" });
+    }
+    res.json(order);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
