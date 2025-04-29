@@ -44,16 +44,12 @@ DigiDining simulates a digital restaurant experience with the following capabili
 ---
 
 ### 1. 📋 Home Page (Menu Overview)
-![Home Page](./screenshots/homepage.png)
 
 ### 2. 🛒 Cart Page
-![Cart](./screenshots/cart.png)
 
 ### 3. 📝 Order Form
-![Order Form](./screenshots/order-form.png)
 
 ### 4. 📜 Order History Page
-![Order History](./screenshots/order-history.png)
 
 ---
 
