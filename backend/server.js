@@ -7,7 +7,9 @@ const orderRoutes = require("./routes/orderRoutes");
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: 'https://digidining-frontend.onrender.com'  // Replace with the actual frontend domain
+}));
 app.use(express.json());
 
 // Routes
