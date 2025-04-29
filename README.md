@@ -1,4 +1,3 @@
-Sure! Here's a **detailed and professional README description** for your DigiDining project, including clear explanations of the purpose, features, technologies, deployment, and screenshot placeholders.
 
 ---
 
@@ -43,10 +42,6 @@ DigiDining simulates a digital restaurant experience with the following capabili
 - Backend and frontend are deployed separately using Render with proper CORS configuration.
 
 ---
-
-## 🖼️ Screenshots
-
-> 💡 **Tip:** Add actual screenshots in a `screenshots/` folder and reference them like below.
 
 ### 1. 📋 Home Page (Menu Overview)
 ![Home Page](./screenshots/homepage.png)
