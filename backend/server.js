@@ -8,7 +8,9 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: 'https://digidining-frontend.onrender.com'  // Replace with the actual frontend domain
+  origin: 'https://digidining-frontend.onrender.com',
+  methods: ['GET', 'POST', 'OPTIONS'], // Specify allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.use(express.json());
 
