@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Order = require("../models/Order");
+
 // Create a new order
 router.post("/", async (req, res) => {
   try {
@@ -9,12 +10,11 @@ router.post("/", async (req, res) => {
       return res.status(400).json({ message: "Invalid request" });
     }
 
-    // Map items to add quantity:1 if not available
     const updatedItems = items.map((item) => ({
       id: item.id,
       name: item.name,
       price: item.price,
-      quantity: item.quantity || 1, // default to 1
+      quantity: item.quantity || 1,  // default to 1 if not provided
     }));
 
     const total = updatedItems.reduce(
